@@ -25,3 +25,19 @@ public class Solution
     }
 }
 ```
+
+#### Nullable
+
+```CSharp
+int? SingleNonDuplicate(int[] nums)
+{
+
+    var num = nums
+        .GroupBy(num => num)
+        .Where(num => num.Count() == 1)
+        .FirstOrDefault();
+
+    return num?.Key;
+
+}
+```
