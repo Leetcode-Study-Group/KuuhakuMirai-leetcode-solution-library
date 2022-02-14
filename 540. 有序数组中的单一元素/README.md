@@ -21,7 +21,7 @@ public class Solution
             .Where(num => num.Count() == 1)
             .FirstOrDefault();
 
-        return num == null ? 0 : num.Key;
+        return num == null ? -1 : num.Key;
     }
 }
 ```
